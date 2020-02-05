@@ -1,0 +1,3 @@
+code/Ovesenterprise   app/code/comunity/Ovesenterprise
+etc/modules/Ovesenterprise_Smso.xml          app/etc/modules/Ovesenterprise_Smso.xml
+@shell                 rm -rf $PROJECT/var/cache/*

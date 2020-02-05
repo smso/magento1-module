@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Ovesenterprise_Smso>
+            <version>0.1.0</version>
+        </Ovesenterprise_Smso>
+    </modules>
+    <global>
+        <helpers>
+            <smso>
+                <class>Ovesenterprise_Smso_Helper</class>
+            </smso>
+        </helpers>
+    </global>
+</config>

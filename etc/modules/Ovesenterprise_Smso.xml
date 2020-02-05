@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ovesenterprise_Smso>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Ovesenterprise_Smso>
+    </modules>
+</config>
