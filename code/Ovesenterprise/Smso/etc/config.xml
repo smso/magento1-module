@@ -12,5 +12,68 @@
                 <class>Ovesenterprise_Smso_Helper</class>
             </smso>
         </helpers>
+
+        <models>
+            <smso>
+                <class>Ovesenterprise_Smso_Model</class>
+            </smso>
+        </models>
+
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <smso_notify_order_place_after>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyPlaceOrderAfter</method>
+                    </smso_notify_order_place_after>
+                </observers>
+            </sales_order_place_after>
+
+            <sales_order_invoice_pay>
+                <observers>
+                    <smso_notify_order_invoice_after>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyPayOrderAfter</method>
+                    </smso_notify_order_invoice_after>
+                </observers>
+            </sales_order_invoice_pay>
+
+            <sales_order_shipment_save_before>
+                <observers>
+                    <smso_notify_order_shipment_before>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyShippedOrderBefore</method>
+                    </smso_notify_order_shipment_before>
+                </observers>
+            </sales_order_shipment_save_before>
+
+            <sales_order_shipment_save_after>
+                <observers>
+                    <smso_notify_order_shipment_after>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyShippedOrderAfter</method>
+                    </smso_notify_order_shipment_after>
+                </observers>
+            </sales_order_shipment_save_after>
+
+            <sales_order_save_commit_after>
+                <observers>
+                    <smso_notify_order_save_commit_after>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyCommitOrderAfter</method>
+                    </smso_notify_order_save_commit_after>
+                </observers>
+            </sales_order_save_commit_after>
+
+            <sales_order_creditmemo_refund>
+                <observers>
+                    <smso_notify_order_creditmemo_refund>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyRefundOrderAfter</method>
+                    </smso_notify_order_creditmemo_refund>
+                </observers>
+            </sales_order_creditmemo_refund>
+
+        </events>
     </global>
 </config>
