@@ -16,6 +16,12 @@ class Ovesenterprise_Smso_Model_System_Config_Source_Sender
     public function toOptionArray()
     {
         $options = [];
+        foreach(Mage::getModel('smso/service_smso')->getSenderList() as $itemObject) {
+            $options[] = [
+                'value' => $itemObject->id,
+                'label' => $itemObject->name
+            ];
+        }
 
         return $options;
     }
