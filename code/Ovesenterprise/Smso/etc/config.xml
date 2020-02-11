@@ -6,6 +6,41 @@
             <version>0.1.0</version>
         </Ovesenterprise_Smso>
     </modules>
+
+    <default>
+        <smso>
+            <new_order>
+                <enable>0</enable>
+                <message><![CDATA[Salut %name%, comanda ta plasata pe smso.ro avand nr. %order_number% a fost inregistrata. Total comanda: %total% lei. Multumim! O zi frumoasa!]]></message>
+            </new_order>
+
+            <shipped_order>
+                <enable>0</enable>
+                <message><![CDATA[Salut %name%! Comanda cu nr. %order_number%  in valoare de %total% lei a fost trimisa catre curier. Mai multe detalii despre comanda vezi pe www.smso.ro ]]></message>
+            </shipped_order>
+
+            <paid_order>
+                <enable>0</enable>
+                <message><![CDATA[Salut %name%, plata pentru comanda  avand nr. %order_number% a fost confirmata cu succes. Iti multumim! Echipa SMSO]]></message>
+            </paid_order>
+
+            <complete_order>
+                <enable>0</enable>
+                <message><![CDATA[Salut %name%, comanda cu nr. %order_number%  plasata pe smso.ro a fost expediata.Total de plata  %total% lei. O zi frumoasa!]]></message>
+            </complete_order>
+
+            <cancel_order>
+                <enable>0</enable>
+                <message><![CDATA[Salut %name%, comanda plasata pe smso.ro avand nr. %order_number% a fost ANULATA. Speram sa revii cat de curand cu o noua comanda! O zi frumoasa! Echipa SMSO]]></message>
+            </cancel_order>
+
+            <refund_order>
+                <enable>0</enable>
+                <message><![CDATA[Salut %name%, din pacate , datorita unor probleme de actualizare a stocului a fost necesar sa anulam comanda cu nr. %order_number% . O zi frumoasa!]]></message>
+            </refund_order>
+        </smso>
+    </default>
+
     <global>
         <helpers>
             <smso>
@@ -19,5 +54,61 @@
             </smso>
         </models>
 
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <smso_notify_order_place_after>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyPlaceOrderAfter</method>
+                    </smso_notify_order_place_after>
+                </observers>
+            </sales_order_place_after>
+
+            <sales_order_invoice_pay>
+                <observers>
+                    <smso_notify_order_invoice_after>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyPayOrderAfter</method>
+                    </smso_notify_order_invoice_after>
+                </observers>
+            </sales_order_invoice_pay>
+
+            <sales_order_shipment_save_before>
+                <observers>
+                    <smso_notify_order_shipment_before>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyShippedOrderBefore</method>
+                    </smso_notify_order_shipment_before>
+                </observers>
+            </sales_order_shipment_save_before>
+
+            <sales_order_shipment_save_after>
+                <observers>
+                    <smso_notify_order_shipment_after>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyShippedOrderAfter</method>
+                    </smso_notify_order_shipment_after>
+                </observers>
+            </sales_order_shipment_save_after>
+
+            <sales_order_save_commit_after>
+                <observers>
+                    <smso_notify_order_save_commit_after>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyCommitOrderAfter</method>
+                    </smso_notify_order_save_commit_after>
+                </observers>
+            </sales_order_save_commit_after>
+
+            <sales_order_creditmemo_refund>
+                <observers>
+                    <smso_notify_order_creditmemo_refund>
+                        <class>Ovesenterprise_Smso_Model_Observer</class>
+                        <method>notifyRefundOrderAfter</method>
+                    </smso_notify_order_creditmemo_refund>
+                </observers>
+            </sales_order_creditmemo_refund>
+
+        </events>
     </global>
 </config>

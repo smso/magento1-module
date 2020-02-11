@@ -3,7 +3,6 @@
  * @category   Smso
  * @package    Ovesenterprise_Smso
  * @copyright  Copyright (c) 2020 Smso (https://www.smso.ro/)
- * @author     Lilian Codreanu <lilian.codreanu@ovesenterprise.com>
  */
 
 class Ovesenterprise_Smso_Model_Service_Smso
@@ -73,9 +72,7 @@ class Ovesenterprise_Smso_Model_Service_Smso
                 )
                 ->request();
             return $response;
-//            if ($response->getStatus() === 200) {
-//                return true;
-//            }
+
         }catch (\Exception $e) {
             Mage::logException($e);
             return false;
@@ -126,5 +123,4 @@ class Ovesenterprise_Smso_Model_Service_Smso
     {
         return Zend_Http_Client_Adapter_Curl::class;
     }
-
 }

@@ -3,7 +3,6 @@
  * @category   Smso
  * @package    Ovesenterprise_Smso
  * @copyright  Copyright (c) 2020 Smso (https://www.smso.ro/)
- * @author     Lilian Codreanu <lilian.codreanu@ovesenterprise.com>
  */
 
 class Ovesenterprise_Smso_Model_Config
@@ -109,19 +108,9 @@ class Ovesenterprise_Smso_Model_Config
      * @return string|string[]
      * @throws Mage_Core_Model_Store_Exception
      */
-    public function getNewOrderMessage(Mage_Sales_Model_Order $order)
+    public function getNewOrderMessage()
     {
-        $message = str_replace(
-            '{{order_number}}',
-            $order->getIncrementId(),
-            $this->getStoreConfig(self::XML_PATH_SMSO_NEW_ORDER_MESSAGE)
-        );
-
-        if (empty($message)) {
-            $message = 'Order was placed!';
-        }
-
-        return $message;
+        return $this->getStoreConfig(self::XML_PATH_SMSO_NEW_ORDER_MESSAGE);
     }
 
 
@@ -140,19 +129,9 @@ class Ovesenterprise_Smso_Model_Config
      * @return string|string[]
      * @throws Mage_Core_Model_Store_Exception
      */
-    public function getShippedMessage(Mage_Sales_Model_Order $order)
+    public function getShippedMessage()
     {
-        $message = str_replace(
-            '{{order_number}}',
-            $order->getIncrementId(),
-            $this->getStoreConfig(self::XML_PATH_SMSO_SHIPPED_MESSAGE)
-        );
-
-        if (empty($message)) {
-            $message = 'Order was shipped!';
-        }
-
-        return $message;
+        return $this->getStoreConfig(self::XML_PATH_SMSO_SHIPPED_MESSAGE);
     }
 
     /**
@@ -170,19 +149,9 @@ class Ovesenterprise_Smso_Model_Config
      * @return string|string[]
      * @throws Mage_Core_Model_Store_Exception
      */
-    public function getPaidMessage(Mage_Sales_Model_Order $order)
+    public function getPaidMessage()
     {
-        $message = str_replace(
-            '{{order_number}}',
-            $order->getIncrementId(),
-            $this->getStoreConfig(self::XML_PATH_SMSO_PAID_MESSAGE)
-        );
-
-        if (empty($message)) {
-            $message = 'Order was paid!';
-        }
-
-        return $message;
+        return $this->getStoreConfig(self::XML_PATH_SMSO_PAID_MESSAGE);
     }
 
     /**
@@ -199,19 +168,9 @@ class Ovesenterprise_Smso_Model_Config
      * @return string|string[]
      * @throws Mage_Core_Model_Store_Exception
      */
-    public function getCompleteOrderMessage(Mage_Sales_Model_Order $order)
+    public function getCompleteOrderMessage()
     {
-        $message = str_replace(
-            '{{order_number}}',
-            $order->getIncrementId(),
-            $this->getStoreConfig(self::XML_PATH_SMSO_COMPLETE_MESSAGE)
-        );
-
-        if (empty($message)) {
-            $message = 'Order was completed!';
-        }
-
-        return $message;
+        return $this->getStoreConfig(self::XML_PATH_SMSO_COMPLETE_MESSAGE);
     }
 
     /**
@@ -229,19 +188,9 @@ class Ovesenterprise_Smso_Model_Config
      * @return string|string[]
      * @throws Mage_Core_Model_Store_Exception
      */
-    public function getCancelOrderMessage(Mage_Sales_Model_Order $order)
+    public function getCancelOrderMessage()
     {
-        $message = str_replace(
-            '{{order_number}}',
-            $order->getIncrementId(),
-            $this->getStoreConfig(self::XML_PATH_SMSO_CANCEL_MESSAGE)
-        );
-
-        if (empty($message)) {
-            $message = 'Order was canceled!';
-        }
-
-        return $message;
+        return $this->getStoreConfig(self::XML_PATH_SMSO_CANCEL_MESSAGE);
     }
 
     /**
@@ -259,18 +208,8 @@ class Ovesenterprise_Smso_Model_Config
      * @return string|string[]
      * @throws Mage_Core_Model_Store_Exception
      */
-    public function getRefundOrderMessage(Mage_Sales_Model_Order $order)
+    public function getRefundOrderMessage()
     {
-        $message = str_replace(
-            '{{order_number}}',
-            $order->getIncrementId(),
-            $this->getStoreConfig(self::XML_PATH_SMSO_REFUND_MESSAGE)
-        );
-
-        if (empty($message)) {
-            $message = 'Order was refunded!';
-        }
-
-        return $message;
+        return $this->getStoreConfig(self::XML_PATH_SMSO_REFUND_MESSAGE);
     }
 }
