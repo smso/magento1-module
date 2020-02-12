@@ -52,6 +52,7 @@
                             <depends>
                                 <enable>1</enable>
                             </depends>
+                            <comment><![CDATA[Selectati un expeditor din lista oferita. Mai multa informatie despre expeditori le gasitit pe platforma <a href="https://app.smso.ro/login">smso</a>]]></comment>
                         </sender>
                     </fields>
                 </general>
@@ -85,6 +86,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Mărimea maximă a unui mesaj SMS standard este de 160 caractere. Recomandam sa nu folositi caractere speciale in mesaj.</a>]]></comment>
                         </message>
                     </fields>
                 </new_order>
@@ -118,6 +120,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Mărimea maximă a unui mesaj SMS standard este de 160 caractere. Recomandam sa nu folositi caractere speciale in mesaj.</a>]]></comment>
                         </message>
                     </fields>
                 </shipped_order>
@@ -151,6 +154,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Mărimea maximă a unui mesaj SMS standard este de 160 caractere. Recomandam sa nu folositi caractere speciale in mesaj.</a>]]></comment>
                         </message>
                     </fields>
                 </paid_order>
@@ -185,6 +189,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Mărimea maximă a unui mesaj SMS standard este de 160 caractere. Recomandam sa nu folositi caractere speciale in mesaj.</a>]]></comment>
                         </message>
                     </fields>
                 </complete_order>
@@ -218,6 +223,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Mărimea maximă a unui mesaj SMS standard este de 160 caractere. Recomandam sa nu folositi caractere speciale in mesaj.</a>]]></comment>
                         </message>
                     </fields>
                 </cancel_order>
@@ -251,6 +257,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Mărimea maximă a unui mesaj SMS standard este de 160 caractere. Recomandam sa nu folositi caractere speciale in mesaj.</a>]]></comment>
                         </message>
                     </fields>
                 </refund_order>
