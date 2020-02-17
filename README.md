@@ -1,4 +1,4 @@
-# Integrare Magento 1 cu Platforma SMSO
+# Integrare Magento 1
 
  * [Introducere](#introducere)
  * [Functionalitati](#functionalitati)
