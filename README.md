@@ -1,7 +1,7 @@
-#Integrare Magento 1 cu Platforma SMSO
+# Integrare Magento 1 cu Platforma SMSO
 
  * [Introducere](#introducere)
- * [Functionalitati](#Functionalitati)
+ * [Functionalitati](#functionalitati)
  * [Instalare](#instalare)
  * [Configurare](#configurare)
  * [Support](#support)
@@ -21,10 +21,10 @@ Pentru functionarea corecta a acestui modul va rog sa luati in calcul urmataorea
 		- Dacă mesajul are caractere speciale, devine mesaj multiplu format din mesaje a căror dimensiune maximă este de 63 caractere.
 
 - Senderi (Expeditori)
-	- 847 - Sender numar scurt shared, valabil in toate retelele nationale . Permite trimiterea de mesaje SMS unidirectional.
+	- 1847 - Sender numar scurt shared, valabil in toate retelele nationale . Permite trimiterea de mesaje SMS unidirectional.
 	- 17xx - Sender numar scurt dedicat. Expeditor numar scurt 17xx valabil in toate retelele nationale. Mesajele trimise cu acest expeditor sunt bidirecționale, destinatarul mesajului poate răspunde celui care a initiat trimiterea SMS-ului
-	- Sender personalizat ( eticheta personalizată) :Expeditor personalizat cu numele brandului tau - pana la 11 caractere alfanumerice Ex. SMSO, 123TAXI.  Mesajele trimise sunt mesaje unidirecționale.
-	- 07xx xxx xxx : Expeditor SIM GSM, poti trimite mesaje SMS folosind propriul SIM. Permite comunicatie bidirectionala.
+	- Sender personalizat (eticheta personalizată): Expeditor personalizat cu numele brandului tau - pana la 11 caractere alfanumerice Ex. SMSO, 123TAXI.  Mesajele trimise sunt mesaje unidirecționale.
+	- 07xx xxx xxx: Expeditor SIM GSM, pentru costuri mai mici. Permite comunicatie bidirectionala.
 
 ## Functionalitati
 
@@ -45,7 +45,7 @@ Modulul ofera urmatoarele functionalitati:
 
 - Instalare modulul cu instrumentul [modman](https://github.com/colinmollenhour/modman).
 ```bash
-	modman clone {{git-url}}
+modman clone {{git-url}}
 ```
 
 ## Configurare
@@ -66,6 +66,7 @@ Pentru configurare urmariti urmatorii pasi de configurare:
 ## Support
 
 In cazul ca aveti nevoie de ajutor va rugam sa contactati echipa [SMSO](http://smso.ro)
+sau  [Puteti adauga un issue aici](https://github.com/smso/magento1-module/issues)
 
 ## License
 
