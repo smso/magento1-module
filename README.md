@@ -59,7 +59,7 @@ System -> Configuration -> (Sales) SMSO Settings
 ```
 Pentru configurare urmariti urmatorii pasi de configurare:
  - Activarea modului
- - Introduceti API Key pe care il gasiți in secțiunea Tools pe platoforma SMSO. [Link](https://app.smso.ro/developers/api)
+ - Introduceti API Key pe care il gasiți in secțiunea Tools pe platforma SMSO. [Link](https://app.smso.ro/developers/api)
  - Salvati Configurariile
  - Selectati un Expeditor din lista incarcata.
  - Setați textul mesajului in functie de statusul comenzii folosind niste variabile simple.
