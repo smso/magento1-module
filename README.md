@@ -22,7 +22,7 @@ Pentru functionarea corecta a acestui modul va rog sa luati in calcul urmataorea
 		- Dacă mesajul are caractere speciale, devine mesaj multiplu format din mesaje a căror dimensiune maximă este de 63 caractere.
 
 - Expeditori
-	- 1847 - Sender numar scurt shared, valabil in toate retelele nationale. Permite trimiterea de mesaje SMS unidirectional.
+	- 18xx - Sender numar scurt shared, valabil in toate retelele nationale. Permite trimiterea de mesaje SMS unidirectional.
 	- 17xx - Sender numar scurt dedicat. Expeditor numar scurt 17xx valabil in toate retelele nationale. Mesajele trimise cu acest expeditor sunt bidirecționale, destinatarul mesajului poate răspunde celui care a initiat trimiterea SMS-ului
 	- Eeticheta personalizată: Expeditor personalizat cu numele brandului tau - pana la 11 caractere alfanumerice (exemplu: Blackfriday, Notify, Verify). Mesajele trimise astfel sunt mesaje unidirecționale.
 	- 07xxxxxxxx: Expeditor numar lung, pentru costuri mai mici. Permite comunicatie bidirectionala.
